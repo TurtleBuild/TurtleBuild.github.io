@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='MASAHIRO KASATANI ポートフォリオ'>
+  <meta property='og:url' content='URLが入る'>
+  <meta property='og:description' content='MASAHIRO KASATANI ポートフォリオ'>
+  <meta name="description" content="MASAHIRO KASATANI ポートフォリオ" />
+  <title>ポートフォリオ | MASAHIRO KASATANI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanjp.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=optional" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=optional" rel="stylesheet">
+  <link href="css/reset.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <nav id="gnav" class="fixed">
+      <ul>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#skill">SKILL</a></li>
+      </ul>
+    </nav>
+    <header id="header">
+      <div class="inner">
+        <div class="logo">
+          <h1 class="logo-title">PORTFOLIO</h1>
+        </div>
+      </div>
+    </header>
+    <main id="contents">
+      <section class="section" id="works">
+        <div class="inner">
+          <h2 class="section-title">WORKS</h2>
+          <div class="section-body card-wrapper">
+
+            <div class="card">
+              <a href="" class="js-modal-open card-image hover-action">
+                <img src="img/works/azami.png" alt="AZAMI" />
+              </a>
+              <div class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+                  <div class="modal__inner">
+                    <section class="modal__main">
+                      <h3>WordPressテーマ「AZAMI」</h3>
+                      <p><img src="img/works/modal/azami.png" alt="AZAMI" width="450" /></p>
+                    </section>
+                    <section class="modal__side">
+                      <h3>About</h3>
+                      <p>技術ブログを作りたく、せっかくなので自作テーマをということで作成しました。</p>
+                      <p>WordPress、SEO、フロントエンド領域のスキルが向上しました。</p>
+                      <h3 class="pt">Tech used</h3>
+                      <p>WordPress | PHP | HTML/CSS | JavaScript | Bootstrap | jquery | MySQL</p>
+                      <div class="pt">
+                        <p><a href="https://azami.turtlebuild.com/" target="_blank"><i class="fas fa-video"></i> デモサイト</a></p>
+                        <p><a href="https://github.com/TurtleBuild/azami" target="_blank"><i class="fab fa-github"></i> ソースコード</a></p>
+                      </div>
+                    </section>
+                  </div>
+                </div><!--modal__inner-->
+              </div><!--modal-->
+              <div class="card-caption">
+                <div class="card-caption-title">WordPressテーマ「AZAMI」</div>
+                <div class="card-caption-info">HTML / CSS / JavaScript / PHP</div>
+              </div>
+            </div><!--card-->
+
+            <div class="card">
+              <a href="" class="js-modal-open card-image hover-action">
+                <img src="img/works/qiita.png" alt="Qiitaいいねランキング" />
+              </a>
+              <div class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+                  <div class="modal__inner">
+                    <section class="modal__main">
+                      <h3>Qiitaいいねランキング</h3>
+                      <p><img src="img/works/qiita.png" alt="Qiitaいいねランキング" width="450" /></p>
+                    </section>
+                    <section class="modal__side">
+                      <h3>About</h3>
+                      <p>サーバーレスを体験したく、せっかくなので役に立つものをということで作成しました。</p>
+                      <p>システム構成は左図のとおりです。下記、概要です。</p>
+                      <ul>
+                        <li>CloudwatchとLambda関数でバッチ処理を構成（DynamoDBへ日次でQiitaの記事情報を登録）</li>
+                        <li>APIGatewayとLambda関数でREST APIを構成</li>
+                        <li>S3静的ホスティングでWebサイトを構成</li>
+                      </ul>
+                      <p>Lambda関数は2つともGoで作成しました。</p>
+                      <p>DynamoDBやLambda、サーバーレスのシステム構築において非常に良い経験となりました。</p>
+                      <h3 class="pt">Tech used</h3>
+                      <p>Go | HTML/CSS | JavaScript | Bootstrap | jquery</p>
+                      <p>AWS( Lambda | APIGateway | DynamoDB | S3 | CloudWatch )</p>
+                      <div class="pt">
+                        <p><a href="http://qiita-likes-rank.s3-website-ap-northeast-1.amazonaws.com" target="_blank"><i class="fas fa-video"></i> デモサイト</a></p>
+                        <p><a href="https://github.com/TurtleBuild/qiita-likes-rank" target="_blank"><i class="fab fa-github"></i> ソースコード</a></p>
+                      </div>
+                    </section>
+                  </div>
+                </div><!--modal__inner-->
+              </div><!--modal-->
+              <div class="card-caption">
+                <div class="card-caption-title">Qiitaいいねランキング</div>
+                <div class="card-caption-info">Go / Lambda / DynamoDB / S3</div>
+              </div>
+            </div><!--card-->
+
+            <div class="card">
+              <a href="" class="js-modal-open card-image hover-action">
+                <img src="img/works/comingsoon.png" alt="Coming Soon" />
+              </a>
+              <div class="card-caption">
+                <div class="card-caption-title"></div>
+                <div class="card-caption-info"></div>
+              </div>
+            </div><!--card-->
+
+          </div>
+        </div>
+      </section>
+      <section class="section" id="about">
+        <div class="inner">
+          <h2 class="section-title">ABOUT</h2>
+          <div class="section-body">
+            <table>
+              <tr>
+                <td>年齢：</td>
+                <td>28歳（1991年生まれ）</td>
+              </tr>
+              <tr>
+                <td>資格：</td>
+                <td>応用情報技術者試験</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>ORACLE MASTER Bronze Oracle Database 12c - JPN</td>
+              </tr>
+              <tr>
+                <td>職歴：</td>
+                <td>SCSK株式会社（2016年4月～2019年12月）</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>新卒でSCSK株式会社に入社。PGとして経験を積んだ後、PMとして複数の1000万円規模プロジェクトを遂行。</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="skill">
+        <div class="inner">
+          <h2 class="section-title">SKILL</h2>
+          <div class="section-body">
+            <h3>言語</h3>
+            <p>Java | Go | PHP | Ruby | JavaScript | HTML/CSS</p>
+            <h3>フレームワーク/ライブラリ</h3>
+            <p>Seasar2 | Ruby on Rails | jquery | Bootstrap</p>
+            <h3>RDB/NoSQL</h3>
+            <p>Oracle | MySQL | Couchbase</p>
+            <h3>SaaS/PaaS</h3>
+            <p>GitHub | Backlog</p>
+            <h3>その他</h3>
+            <p>AWS | Docker | Apache | Tomcat | WordPress</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+</body>
+</html>
