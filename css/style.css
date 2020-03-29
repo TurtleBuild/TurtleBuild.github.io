@@ -249,7 +249,7 @@ li {
   margin-bottom: 0;
 }
 
-#works .modal{
+.modal{
   display: none;
   position: fixed;
   top: 0;
@@ -258,13 +258,13 @@ li {
   height: 100vh;
   z-index: 20;
 }
-#works .modal__bg{
+.modal__bg{
   background: rgba(0,0,0,0.8);
   position: absolute;
   width: 100vw;
   height: 100vh;
 }
-#works .modal__content{
+.modal__content{
   background: #fff;
   position: absolute;
   top: 50%;
@@ -414,7 +414,20 @@ li {
     margin-bottom: 30px;
   }
 
-  #works .modal__content{
+  .modal__inner {
+    display: block;
+  }
+
+  .modal__content{
     width: 90%;
+  }
+
+  .modal__main,
+  .modal__side {
+    margin: 0;
+  }
+
+  .modal__main {
+    margin-bottom: 0.5rem;
   }
 }
