@@ -16,8 +16,16 @@ body {
 }
 
 a {
+  color: #f37159;
   text-decoration: none;
-  color: #1ca9e3;
+}
+a:hover {
+  color: #f37159;
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 1.2rem;
 }
 
 img,
@@ -106,8 +114,8 @@ li {
   letter-spacing: .05em;
 }
 
-#about .inner,
-#skill .inner {
+#skill .inner,
+#history .inner {
   max-width: 800px;
 }
 
@@ -130,6 +138,80 @@ li {
 #header .logo-title {
   font-family: 'Montserrat';
   font-size: 64px;
+}
+
+#header .logo-desc {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  margin-top: 5px;
+  text-align: center;
+  letter-spacing: .2em;
+}
+
+.swirl {
+  perspective: 1000px;
+}
+.swirl span {
+  display: inline-block;
+  transform-origin: 50% 50% -25px;
+  transform-style: preserve-3d;
+  animation: swirl 1.6s;
+}
+.swirl span:nth-child(2) {
+  animation-delay: 50ms;
+}
+.swirl span:nth-child(3) {
+  animation-delay: 100ms;
+}
+.swirl span:nth-child(4) {
+  animation-delay: 150ms;
+}
+.swirl span:nth-child(5) {
+  animation-delay: 200ms;
+}
+.swirl span:nth-child(6) {
+  animation-delay: 250ms;
+}
+.swirl span:nth-child(7) {
+  animation-delay: 300ms;
+}
+.swirl span:nth-child(8) {
+  animation-delay: 350ms;
+}
+.swirl span:nth-child(9) {
+  animation-delay: 400ms;
+}
+.swirl span:nth-child(10) {
+  animation-delay: 450ms;
+}
+.swirl span:nth-child(11) {
+  animation-delay: 500ms;
+}
+.swirl span:nth-child(12) {
+  animation-delay: 550ms;
+}
+.swirl span:nth-child(13) {
+  animation-delay: 600ms;
+}
+.swirl span:nth-child(14) {
+  animation-delay: 650ms;
+}
+.swirl span:nth-child(15) {
+  animation-delay: 700ms;
+}
+.swirl span:nth-child(16) {
+  animation-delay: 750ms;
+}
+.swirl span:nth-child(17) {
+  animation-delay: 800ms;
+}
+@keyframes swirl {
+  0% {
+    transform: rotateX(-360deg);
+  }
+  70% {
+    transform: rotateX(0);
+  }
 }
 
 /*--------------------------------
@@ -297,6 +379,34 @@ li {
  ABOUT
 ---------------------------------*/
 
+#about .section-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#about .section .inner {
+  max-width: 1200px;
+}
+
+#about .section-image {
+  flex-basis: 40%;
+  margin: 0 auto;
+}
+
+#about .section-image img {
+  width: 250px;
+  margin: 0;
+  margin-right: 40px;
+  margin-left: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 25px 0 #d9d9d9;
+}
+
+#about .section-desc {
+  flex-basis: 60%;
+}
+
 #about table {
   width: auto;
 }
@@ -310,6 +420,20 @@ li {
 ---------------------------------*/
 
 #skill p {
+  margin-bottom: 1rem;
+}
+
+/*--------------------------------
+ HISTORY
+---------------------------------*/
+
+#history ul,
+#history li {
+  list-style-type: disc;
+  margin-left: 0.5rem;
+}
+
+#history .section-detail {
   margin-bottom: 1rem;
 }
 
@@ -351,11 +475,11 @@ li {
 
   #header {
     height: 70vh;
+    padding: 0 25px;
   }
 
   #header .logo-title {
     font-size: 24px;
-    letter-spacing: .1em;
   }
 
   #header .logo-desc {
@@ -388,7 +512,7 @@ li {
   }
 
   .section .inner {
-    padding: 0 15px;
+    padding: 0 25px;
   }
 
   .section .section-title {
@@ -402,6 +526,19 @@ li {
 
   .card-caption-title {
     font-size: 10px;
+  }
+
+  #about .section-image {
+    flex-basis: 100%;
+  }
+
+  #about .section-image img {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  #about .section-desc {
+    flex-basis: 100%;
   }
 
   #works .card:nth-child(2n+1):nth-last-child(-n+2),
