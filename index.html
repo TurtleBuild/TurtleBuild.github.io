@@ -136,28 +136,41 @@
               <h3>不動産業界 ECサイトの刷新</h3>
               <p>期間：2020年10月～　立場：PG/IE<br>主要担当業務：</p>
               <ul>
-                <li>CI/CDマルチブランチパイプラインの構築（<a href="" class="js-modal-open"><strong>※ 構成図</strong></a>）
+                <li>マルチブランチCIパイプラインの構築（<a href="" class="js-modal-open"><strong>※ 構成図</strong></a>）
                 <div class="modal js-modal">
                   <div class="modal__bg js-modal-close"></div>
                   <div class="modal__content">
                     <div class="modal__inner">
                       <section class="modal__main">
-                        <h3>CI/CDマルチブランチパイプライン</h3>
-                        <p><img src="img/history/modal/multi-branch-pipeline.png" alt="AZAMI" width="450" /></p>
+                        <h3>マルチブランチCIパイプライン</h3>
+                        <p><img src="img/history/modal/multi-branch-ci-pipeline.png" alt="AZAMI" width="450" /></p>
                       </section>
                       <section class="modal__side">
                         <h3>About</h3>
-                        <p>CodeCommit をリポジトリとして使用したAWS マネージドサービスによるマルチブランチパイプラインの構築。</p>
-                        <p>パイプラインは Lambda による cdk コマンドの実行で操作される。</p>
-                        <ul>
-                          <li>ブランチ作成： cdk deploy</li>
-                          <li>ブランチ削除： cdk destroy</li>
-                        </ul>
-                        <p>結果的にすべてのリソースをCDK管理下に置くことを実現。</p>
-                        <ul>
-                          <li>リポジトリ単位のCDK：<br>CodeCommit | CloudWatch（EventBase） | Lambda</li>
-                          <li>ブランチ単位のCDK：<br>CodePipeline | CodeBuild | CodeDeploy</li>
-                        </ul>
+                        <p>CodeCommit をリポジトリとして使用したAWS マネージドサービスによるマルチブランチパイプラインの構築</p>
+                        <ol>
+                          <li>
+                            <p>パイプラインは Lambda による cdk コマンドの実行で操作</p>
+                            <ul>
+                              <li>ブランチ作成： cdk deploy</li>
+                              <li>ブランチ削除： cdk destroy</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p>すべてのリソースをCDK管理下に置くことを実現</p>
+                            <ul>
+                              <li>リポジトリ単位のCDK：<br>CodeCommit | CloudWatch（EventBase） | Lambda</li>
+                              <li>ブランチ単位のCDK：<br>CodePipeline | CodeBuild</li>
+                            </ul>
+                          </li>
+                          <li>
+                          <p>拡張性と柔軟性のあるコンポーネントとして機能</p>
+                            <ul>
+                              <li>各種gitホスティングサービスはCodeCommitと同期できれば利用可能</li>
+                              <li>CodeDeployと組み合わせたり、CodeBuildから直接ECRにプッシュするなど</li>
+                            </ul>
+                          </li>
+                        </ol>
                         <h3 class="pt">Tech used</h3>
                         <p>TypeScript | CDK | Codeシリーズ | S3 | Lambda | IAM | Cloud Watch</p>
                         <div class="pt">

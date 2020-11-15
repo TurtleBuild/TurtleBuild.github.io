@@ -429,7 +429,7 @@ li {
 ---------------------------------*/
 
 #history ul,
-#history li {
+#history ul li {
   list-style-type: disc;
   margin-left: 0.5rem;
 }
@@ -437,7 +437,21 @@ li {
 #history .section-detail {
   margin-bottom: 1rem;
 }
-
+#history .modal__side ol {
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+}
+#history .modal__side ul {
+  padding-left: 0;
+  padding-bottom: 0.5rem;
+}
+#history .modal__side ol li {
+  list-style-type: decimal;
+}
+#history .modal__side ul li,
+#history .modal__side ol ul li {
+  list-style-type: disc;
+}
 
 /*media Queries 767
 ----------------------------------------------------*/
