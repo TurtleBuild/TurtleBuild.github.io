@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <meta property='og:type' content='website'>
   <meta property='og:title' content='MASAHIRO KASATANI ポートフォリオ'>
-  <meta property='og:url' content='URLが入る'>
+  <meta property='og:url' content='https://turtlebuild.github.io/'>
   <meta property='og:description' content='MASAHIRO KASATANI ポートフォリオ'>
   <meta name="description" content="MASAHIRO KASATANI ポートフォリオ" />
   <title>ポートフォリオ | MASAHIRO KASATANI</title>
@@ -26,6 +26,7 @@
         <li><a href="#skill">SKILL</a></li>
         <li><a href="#history">HISTORY</a></li>
         <li><a href="#works">WORKS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </nav>
     <header id="header">
@@ -97,6 +98,29 @@
                   <td></td>
                   <td><a href="https://www.certmetrics.com/amazon/public/transcript.aspx?transcript=4LDTMLTCCNR4QBG6" target="_blank">AWS Certified Solutions Architect - Associate - Japanese (JPN)</a></td>
                 </tr>
+                <tr>
+                  <td>強み：</td>
+                  <td>
+                    <dl>
+                      <dt>１．バックエンド領域の設計・実装</dt>
+                      <dd>
+                        <p>特にSpring Bootによる開発でバリューを発揮できます。<br>
+                      PM経験もあるため、ユーザーとシステムの両視点から課題の解決策を導出します。</p>
+                      </dd>
+                      <dt>２．クラウドアーキテクチャ設計および実装（IaC）</dt>
+                      <dd>
+                        <p>AWSを専門としており、様々なアーキテクチャを設計し、CDKで実装しております。<br>
+                      特にCI/CD、コンテナオーケストレーション周りでバリューを発揮できます。</p>
+                      </dd>
+                      <dt>３．高い学習能力、コミュニケーション能力と責任感</dt>
+                      <dd>
+                        <p>未知の領域であっても、高い学習能力によって高パフォーマンスを発揮します。<br>
+                      独力で難しい場合は、周りを上手く巻き込み、必ず成果物を出す責任感があります。<br>
+                      ⇒ <a href="https://blog.turtlebuild.com" target="_blank"><strong>Tech Blog</strong></a></p>
+                      </dd>
+                    </dl>
+                  </td>
+                </tr>
               </table>
             </div>
           </div>
@@ -108,15 +132,15 @@
           <h2 class="section-title">SKILL</h2>
           <div class="section-body">
             <h3>Programming Language</h3>
-            <p>Java | Go | PHP | Perl | TypeScript | JavaScript | HTML/CSS</p>
+            <p>Java | Go | TypeScript | PHP | Perl | JavaScript | HTML/CSS</p>
             <h3>Framework/Library</h3>
             <p>Spring Boot | Seasar2 | jquery | Bootstrap</p>
             <h3>RDB/NoSQL</h3>
             <p>Oracle | MySQL | SQL Server | Redis | Couchbase</p>
             <h3>Infrastructure</h3>
-            <p>Docker | Kubernetes | Ansible | Elasticsearch | Kibana | Apache | Tomcat </p>
+            <p>Docker | Kubernetes | Ansible | Elasticsearch | Kibana | Nginx | Apache | Tomcat </p>
             <h3>AWS</h3>
-            <p>CDK | Cloud Formation | Codeシリーズ | ECS | Fargate | ECR | S3 | Lambda | IAM | Cloud Watch | API Gateway | Route53 | WAF | Lambda@Edge | CloudFront | ELB | VPC</p>
+            <p>CDK | Cloud Formation | Codeシリーズ | Step Functions | ECS | Fargate | ECR | S3 | Lambda | IAM | Cloud Watch | API Gateway | Route53 | WAF | Lambda@Edge | CloudFront | ELB | VPC | DynamoDB</p>
             <h3>SaaS/PaaS</h3>
             <p>GitHub | GitLab | Bitbucket | Backlog | Jira | Confluence</p>
             <h3>Other</h3>
@@ -136,53 +160,9 @@
               <h3>不動産業界 ECサイトの刷新</h3>
               <p>期間：2020年10月～　立場：PG/IE<br>主要担当業務：</p>
               <ul>
-                <li>フロントエンド(SSR)インフラ設計 【構成図(現在進行中)】</li>
-                <li>フロントエンド(SSR)CI/CD設計 【構成図(現在進行中)】</li>
-                <li>マルチブランチCIパイプラインの設計・実装(IaC) 【<a href="" class="js-modal-open"><strong>構成図</strong></a>】
-                <div class="modal js-modal">
-                  <div class="modal__bg js-modal-close"></div>
-                  <div class="modal__content">
-                    <div class="modal__inner">
-                      <section class="modal__main">
-                        <h3>マルチブランチCIパイプライン</h3>
-                        <p><img src="img/history/modal/multi-branch-ci-pipeline.png" alt="AZAMI" width="450" /></p>
-                      </section>
-                      <section class="modal__side">
-                        <h3>About</h3>
-                        <p>CodeCommit をリポジトリとして使用したAWS マネージドサービスによるマルチブランチパイプラインの構築</p>
-                        <ol>
-                          <li>
-                            <p>パイプラインは Lambda による cdk コマンドの実行で操作</p>
-                            <ul>
-                              <li>ブランチ作成： cdk deploy</li>
-                              <li>ブランチ削除： cdk destroy</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <p>すべてのリソースをCDK管理下に置くことを実現</p>
-                            <ul>
-                              <li>リポジトリ単位のCDK：<br>CodeCommit | CloudWatch（EventBase） | Lambda</li>
-                              <li>ブランチ単位のCDK：<br>CodePipeline | CodeBuild</li>
-                            </ul>
-                          </li>
-                          <li>
-                          <p>拡張性と柔軟性のあるコンポーネントとして機能</p>
-                            <ul>
-                              <li>各種gitホスティングサービスはCodeCommitと同期できれば利用可能</li>
-                              <li>CodeDeployと組み合わせたり、CodeBuildから直接ECRにプッシュするなど</li>
-                            </ul>
-                          </li>
-                        </ol>
-                        <h3 class="pt">Tech used</h3>
-                        <p>TypeScript | CDK | Codeシリーズ | S3 | Lambda | IAM | Cloud Watch</p>
-                        <div class="pt">
-                          <p>※CDKソースコードについては、所属企業に著作権があるため非公開</p>
-                        </div>
-                      </section>
-                    </div>
-                  </div><!--modal__inner-->
-                </div><!--modal-->
-                </li>
+                <li>サーバーレスバッチサービスインフラおよびCI/CD設計・実装(IaC) 【詳細(現在進行中)】</li>
+                <li>フロントエンド(SSR)インフラおよびCI/CD設計 【詳細(現在進行中)】</li>
+                <li>マルチブランチCIパイプラインの設計・実装(IaC) 【<a href="https://blog.turtlebuild.com/aws-multi-branch-pipeline" target="_blank"><strong>詳細</strong></a>】</li>
               </ul>
             </div>
 
@@ -313,6 +293,39 @@
 
             <div class="card">
               <a href="" class="js-modal-open card-image hover-action">
+                <img src="img/works/comingsoon.png" alt="pacvim" />
+              </a>
+              <div class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+                  <div class="modal__inner">
+                    <section class="modal__main">
+                      <h3>pacvim</h3>
+                      <p><img src="img/works/comingsoon.png" alt="pacvim" width="450" /></p>
+                    </section>
+                    <section class="modal__side">
+                      <h3>About</h3>
+                      <p>vimコマンドで移動するパックマン</p>
+                      <p>ターミナル上で動作(Windows，Macで動作検証済み)</p>
+                      <p>楽しくvimの練習をしたい人は遊んでみてください</p>
+                      <p>ゲーム作成はゴルーチンの理解が向上するのでオススメ</p>
+                      <h3 class="pt">Tech used</h3>
+                      <p>Go</p>
+                      <div class="pt">
+                        <p><i class="fab fa-github"></i> ソースコード【準備中】</p>
+                      </div>
+                    </section>
+                  </div>
+                </div><!--modal__inner-->
+              </div><!--modal-->
+              <div class="card-caption">
+                <div class="card-caption-title">pacvim</div>
+                <div class="card-caption-info">Go</div>
+              </div>
+            </div><!--card-->
+
+            <div class="card">
+              <a href="" class="js-modal-open card-image hover-action">
                 <img src="img/works/comingsoon.png" alt="Coming Soon" />
               </a>
               <div class="card-caption">
@@ -321,6 +334,25 @@
               </div>
             </div><!--card-->
 
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="inner">
+          <div class="section-title-area">
+            <h2 class="section-title">CONTACT</h2>
+          </div>
+          <div class="section-body contact-wrapper">
+            <div class="contact-list">
+              <ul>
+                <li><a href="https://twitter.com/kasatani6" target="_blank"><img src="img/contact/icon_tw.png" alt="twitter"></a>
+                </li>
+                <li><a href="https://www.wantedly.com/id/kasatani" target="_blank"><img src="img/contact/icon_w.png" alt="wantedly"></a>
+                </li>
+              </ul>
+              <div class="contact-mail">turtlebuild@gmail.com</div>
+            </div>
           </div>
         </div>
       </section>
