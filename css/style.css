@@ -354,7 +354,7 @@ li {
   left: 50%;
   padding: 40px;
   transform: translate(-50%,-50%);
-  width: 60%;
+  width: 80%;
 }
 
 .modal__inner {
@@ -419,6 +419,12 @@ li {
 #about table td dl dd {
   margin-left: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+#about ul,
+#about ul li {
+  list-style-type: disc;
+  margin-left: 0.5rem;
 }
 
 /*--------------------------------
@@ -493,6 +499,65 @@ li {
   font-size: 14px;
   margin-top: 10px;
   text-align: center;
+}
+
+/* タグクラウド */
+.skill-tag, .good {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.25rem 0.5rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.skill-tag {
+  color: #363636;
+}
+.good {
+  color: #F37B66;
+}
+.skill-tag::before, .good::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f138";
+  padding-right: 4px;
+}
+.skill-tag::before {
+  content: "\f138";
+}
+.good::before {
+  content: "\f164";
+}
+
+#skill .section-body div {
+  padding-left: 1rem;
+}
+
+.alert {
+  color: #F37B66;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#history table {
+  width: auto;
+}
+
+#history table td {
+  min-width: 80px;
+}
+
+#history .section-detail {
+  padding-bottom: 1rem;
 }
 
 /*media Queries 767
