@@ -201,6 +201,11 @@
               <p>
                 <span class="skill-tag">CloudWatch</span>
                 <span class="skill-tag">CloudFormation</span>
+                <span class="skill-tag">CloudTrail</span>
+              </p>
+              <h4>Migration & Transfer</h4>
+              <p>
+                <span class="skill-tag">Transfer Family</span>
               </p>
             </div>
             <br>
@@ -226,14 +231,13 @@
             <br>
             <hr>
             <br>
-            <h3>Database & Migration</h3>
+            <h3>Database</h3>
             <p>
               <span class="skill-tag">Oracle</span>
               <span class="skill-tag">MySQL</span>
               <span class="skill-tag">SQL Server</span>
               <span class="skill-tag">PostgreSQL</span>
               <span class="skill-tag">Redis</span>
-              <span class="skill-tag">Flyway</span>
             </p>
             <br>
             <hr>
@@ -242,6 +246,7 @@
             <p>
               <span class="skill-tag">Elasticsearch</span>
               <span class="skill-tag">Kibana</span>
+              <span class="skill-tag">Flyway</span>
             </p>
           </div>
         </div>
@@ -269,44 +274,49 @@
                     <ul>
                       <li>
                         <div>
-                          <a href="" class="js-modal-open">共通基盤ネットワークの構築</a>
+                          <a href="" class="js-modal-open">ネットワーク基盤の構築</a>
                           <div class="modal js-modal">
                             <div class="modal__bg js-modal-close"></div>
                             <div class="modal__content">
                               <div class="modal__inner">
                                 <section class="modal__main">
-                                  <h3>共通基盤ネットワーク</h3>
-                                  <p><img src="img/history/modal/common-network.png" alt="Qiitaいいねランキング" width="700" /></p>
+                                  <h2>ネットワーク基盤</h2>
+                                  <p><img src="img/history/modal/network.png" alt="Qiitaいいねランキング" width="700" /></p>
                                 </section>
                                 <section class="modal__side">
-                                  <h3>概要</h3>
-                                  <ul>
-                                    <li>全サービスが共通して利用するネットワーク</li>
-                                    <li>共通基盤ネットワークは共通のAWSアカウントに１スタック構築する</li>
-                                    <li>Service VPC はサービスごとに用意された各AWSアカウントにそれぞれ構築する</li>
-                                    <li>AWS CDK で実装・構築する</li>
-                                    <li>CI/CD基盤として、Bitbucket Pipelinesを使用する</li>
-                                  </ul>
-                                  <h3>構成要素</h3>
-                                  <h4>NAT VPC</h4>
-                                  <ul>
-                                    <li>NATゲートウェイのみを配置し、インターネットへのアウトバウンドを提供</li>
-                                    <li>システム全体で固定のIPアドレスによる外部サービスとの通信を可能に</li>
-                                  </ul>
-                                  <h4>Service VPC</h4>
-                                  <ul>
-                                    <li>各サービスを稼働させる VPC</li>
-                                  </ul>
-                                  <h4>Maintenance VPC</h4>
-                                  <ul>
-                                    <li>踏み台用EC2インスタンスを配置</li>
-                                    <li>開発者にService VPCへのメンテナンスアクセス経路を提供</li>
-                                  </ul>
-                                  <h4>Transit Gateway</h4>
-                                  <ul>
-                                    <li>各VPCを相互に接続</li>
-                                    <li>サービス間連携の通信経路や保守・運用におけるメンテナンス用のアクセス経路を提供</li>
-                                  </ul>
+                                  <h2>Common Network CDK</h2>
+                                  <p>共通のAWSアカウントに１スタック構築する</p>
+                                  <h3>構成リソース</h3>
+                                  <ol>
+                                    <li>NAT VPC
+                                      <ul>
+                                        <li>NATゲートウェイのみを配置し、インターネットへのアウトバウンドを提供</li>
+                                        <li>システム全体で固定のIPアドレスによる外部サービスとの通信を可能に</li>
+                                      </ul>
+                                    </li>
+                                    <li>Maintenance VPC
+                                      <ul>
+                                        <li>踏み台用EC2インスタンスを配置</li>
+                                        <li>開発者にService VPCへのメンテナンスアクセス経路を提供</li>
+                                      </ul>
+                                    </li>
+                                    <li>Transit Gateway
+                                      <ul>
+                                        <li>各VPCを相互に接続</li>
+                                        <li>サービス間連携の通信経路や保守・運用におけるメンテナンス用のアクセス経路を提供</li>
+                                      </ul>
+                                    </li>
+                                  </ol>
+                                  <h2>Backend Network CDK</h2>
+                                  <p>サービスごとに用意された各AWSアカウントにそれぞれ構築する</p>
+                                  <h3>構成リソース</h3>
+                                  <ol>
+                                    <li>Service VPC
+                                      <ul>
+                                        <li>各サービスを稼働させる VPC</li>
+                                      </ul>
+                                    </li>
+                                  </ol>
                                 </section>
                               </div>
                             </div><!--modal__inner-->
@@ -314,7 +324,58 @@
                         </div>
                       </li>
 
-                      <li>データベース基盤の設計・実装・構築</li>
+                      <li>
+                        <div>
+                          <a href="" class="js-modal-open">データベース基盤の設計・実装・構築</a>
+                          <div class="modal js-modal">
+                            <div class="modal__bg js-modal-close"></div>
+                            <div class="modal__content">
+                              <div class="modal__inner">
+                                <section class="modal__main">
+                                  <h2>データベース基盤</h2>
+                                  <p><img src="img/history/modal/database.png" alt="Qiitaいいねランキング" width="700" /></p>
+                                </section>
+                                <section class="modal__side">
+                                  <h2>Backend Database CDK</h2>
+                                  <p>サービスごとに用意された各AWSアカウントにそれぞれ構築する</p>
+                                  <h3>構成リソース</h3>
+                                  <ol>
+                                    <li>RDS（Aurora）
+                                      <ul>
+                                        <li>RDSへ接続を許可するセキュリティグループを作成する</li>
+                                        <li>アプリケーションサブネットからの接続を許可するIngressルールを<br>セキュリティグループに付与する</li>
+                                      </ul>
+                                    </li>
+                                  </ol>
+                                  <h2>Database Migration CDK</h2>
+                                  <p>DBスキーマごとに構築する</p>
+                                  <h3>構成リソース</h3>
+                                  <ol>
+                                    <li>CodePipeline
+                                      <ul>
+                                        <li>Bitbucket Pipelinesから AWS CLI で実行される</li>
+                                        <li>Source Action で Bitbucketリポジトリから DDLファイルを取得する</li>
+                                      </ul>
+                                    </li>
+                                    <li>CodeBuild
+                                      <ul>
+                                        <li>RDS と同一VPC内に配置する</li>
+                                        <li>RDS の特定スキーマに対して flyway migrate を実行する</li>
+                                      </ul>
+                                    </li>
+                                    <li>Secrets Manager
+                                      <ul>
+                                        <li>RDS情報および flyway用の DBユーザー情報</li>
+                                        <li>CodeBuild から参照する</li>
+                                      </ul>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </div>
+                            </div><!--modal__inner-->
+                          </div><!--modal-->
+                        </div>
+                      </li>
                       <li>APIインフラ基盤の構築</li>
                       <li>Batchインフラ基盤の設計・実装・構築</li>
                       <li>SPAアプリケーション基盤の構築</li>
