@@ -147,6 +147,7 @@
                 <span class="skill-tag">Transit Gateway</span>
                 <span class="skill-tag">Route 53</span>
                 <span class="skill-tag">CloudFront</span>
+                <span class="skill-tag">NLB</span>
                 <span class="skill-tag">ALB</span>
               </p>
               <h4>Database</h4>
@@ -281,7 +282,7 @@
                               <div class="modal__inner">
                                 <section class="modal__main">
                                   <h2>ネットワーク基盤</h2>
-                                  <p><img src="img/history/modal/network.png" alt="Qiitaいいねランキング" width="700" /></p>
+                                  <p><img src="img/history/modal/network.png" alt="ネットワーク基盤" width="700" /></p>
                                 </section>
                                 <section class="modal__side">
                                   <h2>Common Network CDK</h2>
@@ -333,7 +334,7 @@
                               <div class="modal__inner">
                                 <section class="modal__main">
                                   <h2>データベース基盤</h2>
-                                  <p><img src="img/history/modal/database.png" alt="Qiitaいいねランキング" width="700" /></p>
+                                  <p><img src="img/history/modal/database.png" alt="データベース基盤" width="700" /></p>
                                 </section>
                                 <section class="modal__side">
                                   <h2>Backend Database CDK</h2>
@@ -377,9 +378,65 @@
                         </div>
                       </li>
                       <li>APIインフラ基盤の構築</li>
-                      <li>Batchインフラ基盤の設計・実装・構築</li>
+                      <li>
+                        <div>
+                          <a href="" class="js-modal-open">Batchインフラ基盤の設計・実装・構築</a>
+                          <div class="modal js-modal">
+                            <div class="modal__bg js-modal-close"></div>
+                            <div class="modal__content">
+                              <div class="modal__inner">
+                                <section class="modal__main">
+                                  <h2>Batchインフラ基盤</h2>
+                                  <p><img src="img/history/modal/batch.png" alt="Batchインフラ基盤" width="700" /></p>
+                                </section>
+                                <section class="modal__side">
+                                  <h2>Batch CDK</h2>
+                                  <p>Step Functionsステートマシン単位で構築する</p>
+                                  <h3>構成リソース</h3>
+                                  <ol>
+                                    <li>Step Functionsステートマシン
+                                      <ul>
+                                        <li>各ステートはFargateタスクで構成される</li>
+                                        <li>実行IDなどはコンテナ環境変数としてアプリケーションに渡す</li>
+                                        <li>ステート間で値を受け渡す場合は、DynamoDB等の外部ストレージを使用する</li>
+                                      </ul>
+                                    </li>
+                                    <li>ECSクラスタ
+                                      <ul>
+                                        <li>バッチアプリケーションであるため、サービスは不要</li>
+                                      </ul>
+                                    </li>
+                                    <li>Fargateタスク
+                                      <ul>
+                                        <li>下記のコンテナで構成される
+                                          <ul>
+                                            <li>アプリケーション（Spring Boot）</li>
+                                            <li>Datadog Agent</li>
+                                            <li>Fluentd</li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li>CloudWatchイベント
+                                      <ul>
+                                        <li>下記いずれかをトリガーとしてStep Functionsを開始する
+                                          <ul>
+                                            <li>S3 Putイベントトリガー</li>
+                                            <li>スケジュールトリガー</li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </div>
+                            </div><!--modal__inner-->
+                          </div><!--modal-->
+                        </div>
+                      </li>
                       <li>SPAアプリケーション基盤の構築</li>
                       <li>SSRアプリケーション基盤の設計・実装・構築</li>
+                      <li>SFTP連携基盤の設計・実装・構築</li>
                     </ul>
                   </td>
                 </tr>
