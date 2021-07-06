@@ -430,6 +430,16 @@ li {
   margin-left: 0.5rem;
 }
 
+#about .sns-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+#about .sns-buttons a {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
 /*--------------------------------
  SKILL
 ---------------------------------*/
