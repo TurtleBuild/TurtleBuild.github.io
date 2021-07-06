@@ -436,7 +436,62 @@
                       </li>
                       <li>SPAアプリケーション基盤の構築</li>
                       <li>SSRアプリケーション基盤の設計・実装・構築</li>
-                      <li>SFTP連携基盤の設計・実装・構築</li>
+                      <li>
+                        <div>
+                          <a href="" class="js-modal-open">SFTP連携基盤の設計・実装・構築</a>
+                          <div class="modal js-modal">
+                            <div class="modal__bg js-modal-close"></div>
+                            <div class="modal__content">
+                              <div class="modal__inner">
+                                <section class="modal__main">
+                                  <h2>SFTP連携基盤</h2>
+                                  <p><img src="img/history/modal/sftp.png" alt="SFTP連携基盤" width="700" /></p>
+                                </section>
+                                <section class="modal__side">
+                                  <h2>SFTP CDK</h2>
+                                  <p>パブリックとプライベートの2構成から選択してデプロイする（左図はパブリック構成）</p>
+                                  <h3>構成リソース</h3>
+                                  <ol>
+                                    <li>Transfer Family
+                                      <ul>
+                                        <li>SFTPサーバー</li>
+                                        <li>SFTPユーザー</li>
+                                        <li>VPCエンドポイント、ENIおよびEIP（CDKデプロイ時に自動で作成される）</li>
+                                      </ul>
+                                    </li>
+                                    <li>S3</li>
+                                  </ol>
+                                  <h3>アクセス経路</h3>
+                                  <ol>
+                                    <li>Fargateバッチアプリケーション → S3</li>
+                                    <li>クライアントGUIツール → S3</li>
+                                    <li>Transfer Family（SFTPサーバー） → S3</li>
+                                  </ol>
+                                  <h3>セキュリティ</h3>
+                                  <ol>
+                                    <li>SFTPサーバーVPCエンドポイントのセキュリティグループ
+                                      <ul>
+                                        <li>インバウンドルールでポート22のクライアントIPアドレス（範囲）制限を実施する</li>
+                                      </ul>
+                                    </li>
+                                    <li>S3バケットポリシー
+                                      <ul>
+                                        <li>すべて拒否のポリシーを基底とし、ホワイトリスト形式で許可するアクセスを指定する
+                                          <ul>
+                                            <li>VPCエンドポイント：内部および外部のバッチアプリケーションからのアクセス制御</li>
+                                            <li>IPアドレス：クライアントのGUIツール等からのアクセス制御</li>
+                                            <li>ユーザーID：内部SFTPサーバーからのアクセス制御</li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </div>
+                            </div><!--modal__inner-->
+                          </div><!--modal-->
+                        </div>
+                      </li>
                     </ul>
                   </td>
                 </tr>
